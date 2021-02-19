@@ -1,7 +1,7 @@
 title: Filip Cynarski Software Development
 description: > # this means to ignore newlines until "baseurl:"
   Software Development, software quality expert, test automation, smart home solutions.
-  Oprogramowanie komuterowe, procesy jakości oprogramowania, testowanie oprogramowania oraz automatyzacja testów.
+  Oprogramowanie komputerowe, procesy jakości oprogramowania, testowanie oprogramowania oraz automatyzacja testów.
 permalink: ':title/'
 baseurl: ""
 url: "https://cynarski.eu"
@@ -10,7 +10,7 @@ site-twitter: #if your site has a twitter account, enter it here
 # Author Settings
 author: Filip Cynarski # add your name
 author-img: filip-cynarski.png # add your photo
-about-author: I am a web developer focusing on front-end development. Always hungry to keep learning. # add description
+about-author: I am software quality expert, with strong Java development skills. I'm focusing on quality processes improvemnts and tests automation.
 social-twitter: # add your Twitter handle
 social-facebook: # add your Facebook handle
 social-github: filipcynarski # add your Github handle
