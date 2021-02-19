@@ -8,13 +8,11 @@ url: "https://cynarski.eu"
 site-twitter: #if your site has a twitter account, enter it here
 
 # Author Settings
-author: Filip Cynarski # add your name
-author-img: filip-cynarski.png # add your photo
-about-author: I am a software quality expert, with strong Java development skills. I'm focusing on quality process improvements and test automation.
-social-twitter: # add your Twitter handle
-social-facebook: # add your Facebook handle
-social-github: filipcynarski # add your Github handle
-social-linkedin: # add your Linkedin handle
+author: Filip Cynarski
+author-img: filip-cynarski.png
+about-author: I am a software quality expert - with strong Java programming skills. I've started programming when I was 12-years old and still enjoying being a part of an exciting journey of how the IT market is evolving.
+social-github: filipcynarski
+social-linkedin: filip-cynarski-39b3b260
 social-email: filip@cynarski.eu
 
 # Disqus
