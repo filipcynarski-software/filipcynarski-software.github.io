@@ -21,7 +21,7 @@ but when you try to configure your NAS as a HomeAssistant you end up with nothin
 In my case I was disappointed the HomeAssistant package is available on package center only for more expensive Synology and started thinking to obtain RaspberryPI but it is another device in my home which consumes energy just 
 for running HomeAssistant while Synology is working as a file server it caused me to try again, and I managed it :)
 
-It only applies to the Synology products which are running on ARM-based 32bit processors (not Synology DSM - Surveillance Station)
+It only applies to the Synology products which are running on ARM-based 32bit processors
 
 You have few options here:
 - Try to install HomeAssistant from sources
