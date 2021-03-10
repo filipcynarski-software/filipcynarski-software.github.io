@@ -10,40 +10,40 @@ tags: [Synology, 32b, Docker, ARM, 32b, ARMv7, armhf]
 
 # The problem
 
-I love Docker, it makes my work simpler and helps me to keep environment of my computer cleaner. 
-I can play with software without a risk of damaging impact of the introduced changes.
+I love Docker, it makes my work simpler and helps me to keep the environment of my computer cleaner. 
+I can play with software without the risk of the damaging impact of the introduced changes.
 
-ARM platform became more and more [popular in IoT world](https://collabnix.com/building-arm-based-docker-images-on-docker-desktop-made-possible-using-buildx/), good thing is our NAS is based on ARM CPU.
+ARM platform became more and more [popular in the IoT world](https://collabnix.com/building-arm-based-docker-images-on-docker-desktop-made-possible-using-buildx/), the good thing is our NAS is based on ARM CPU.
 
 The Synology server is the best fit for HomeAssistant if you have Synology already and thinking to play with smart home solutions
-but when you try to configure your NAS as a HomeAssistant you end up with nothing or spend hours to try to make it working.
+but when you try to configure your NAS as a HomeAssistant you end up with nothing or spend hours trying to make it work.
 
 It only applies to the cheapest Synology products which are running on ARM-based 32bit processors.
 
 You have few options here:
 - Try to install HomeAssistant from sources
 - Forget about Synology as a runtime environment for Docker
-- or do what I did when I've decided to digg deeper and understand a little bit the Synology architecture
+- or do what I did when I've decided to dig deeper and understand the Synology architecture
 
 ## What we need
 
 * SSH access enabled on Synology -> (Go to DSM UC > Control Panel > Terminal & SNMP > Terminal, and tick Enable SSH service)
 * [Static binaries of docker](https://github.com/docker-library/official-images#architectures-other-than-amd64) | [Binaries List](https://download.docker.com/linux/static/stable/)
-* [Knowledge how to integrate it with our OS](https://docs.docker.com/engine/install/binaries/)
+* [Knowledge of how to integrate it with our OS](https://docs.docker.com/engine/install/binaries/)
 
-Don't worry I'll explain you step by step how to make it working on your ARM-32bits-based server
+Don't worry I'll explain to you step by step how to make it working on your ARM-32bits-based server
 
 ## Let's start
 
 ### Overview, gathering facts
 
-Please SSH-in to your Synology. If you are using OS X or Linux open up terminal and type
+Please SSH-in to your Synology. If you are using OS X or Linux open up the terminal and type
 
 ```bash
 ssh admin@YOURIP
 ```
 
-Windows users needs to use the PUTTY client.
+Windows users need to use the PUTTY client.
 
 #### Synology file structure
 
@@ -125,9 +125,9 @@ So ours is *armhf*
 
 ### Binaries download & testing
 
-Ok, we know a little more about or hardware, so it is a good time to download binaries and proceed with installation.
+Ok, we know a little more about or hardware, so it is a good time to download binaries and proceed with the installation.
 
-Go to you home directory and prepare directory for download and extraction of the archive
+Go to your home directory and prepare a directory for the download and extraction of the archive
 
 ```bash
 cd ~/
@@ -145,7 +145,7 @@ tar xvf docker-x.x.x.tgz
 ```
 Where `docker-x.x.x.tgz` is downloaded TAR archive
 
-Before we install the extracted files we can test is docker binary compatible with our OS, so let's change directory to extracted one and test the binary like below:
+Before we install the extracted files we can test is the docker binary compatible with our OS, so let's change the directory to extracted one and test the binary like below:
 
 ```bash
 cd docker
@@ -156,11 +156,11 @@ the output example:
 ```bash
 Docker version 20.10.5, build 55c4c88
 ```
-The output should be the downloaded docker version info of the docker binary if we receive error message instead it means we downloaded incompatible package.
+The output should be the downloaded docker version info of the docker binary if we receive an error message instead it means we downloaded an incompatible package.
 
 ### Docker installation
 
-You can go to [this](https://docs.docker.com/engine/install/binaries/) document directly or read entire description below
+You can go to [this](https://docs.docker.com/engine/install/binaries/) document directly or read the entire description below
 
 Let's check where you are
 
@@ -176,7 +176,7 @@ should output
 
 Time to install your docker:
 
-* IMPORTANT you are in extracted directory of docker archive
+* IMPORTANT you are in the extracted directory of docker archive
 * What we are going to do right now
   * Change directory to level up just for safety and readability
   * Copy all binaries to `/usr/bin/` directory
@@ -193,7 +193,7 @@ Start the Docker daemon:
 sudo dockerd &
 ```
 
-If no errors means it runs :)
+If no error message is thrown means it runs :)
 
 Additional configuration
 
@@ -203,7 +203,7 @@ We need to tell Docker we need to store data in our `/volume1` but before we nee
 mkdir /volume1/docker
 ```
 
-Docker needs config file for that:
+Docker needs a config file for that:
 
 so you need to create/edit following file `/etc/docker/daemon.json`
 
@@ -216,7 +216,7 @@ so you need to create/edit following file `/etc/docker/daemon.json`
 }
 ```
 
-To test docker is able to run call `dockerd` command
+To test docker can run call `dockerd` command
 
 ``` bash
 dockerd
@@ -236,7 +236,7 @@ Once it is up SSH-in again and type to test your Docker
 sudo docker run hello-world
 ```
 
-You should see finally tge output from hello-world container
+You should see finally the output from the hello-world container
 
 ```bash
 Hello from Docker!
@@ -261,4 +261,4 @@ For more examples and ideas, visit:
  https://docs.docker.com/get-started/
 ```
 
-CONGRATULATIONS YOU HAVE INSTALLED DOCKER ON your ARM based NAS!
+CONGRATULATIONS YOU HAVE SUCCESSFULLY INSTALLED DOCKER ON your ARM-based NAS!
