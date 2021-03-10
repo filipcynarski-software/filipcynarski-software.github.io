@@ -5,20 +5,23 @@ date: 2021-02-19 18:00:20 +0100
 description: How to run Docker on ARMv7 based Synology 32b NAS 
 img: i-rest.jpg # Add image post (optional)
 fig-caption: # Add figcaption (optional)
-tags: [Synology, 32b, Docker, ARM, 32b, ARMv7, armhf]
+tags: [Synology, 32bit, Docker, ARM, ARMv7, armhf]
 ---
 
 # The problem
 
-I love Docker, it makes my work simpler and helps me to keep the environment of my computer cleaner. 
-I can play with software without the risk of the damaging impact of the introduced changes.
+I love Docker, it makes my work simpler and helps me to keep the environment of my OS clean. 
+I can play with software without the risk of the damaging impact (hard to revert/control some modifications) of the introduced changes.
 
 ARM platform became more and more [popular in the IoT world](https://collabnix.com/building-arm-based-docker-images-on-docker-desktop-made-possible-using-buildx/), the good thing is our NAS is based on ARM CPU.
 
 The Synology server is the best fit for HomeAssistant if you have Synology already and thinking to play with smart home solutions
 but when you try to configure your NAS as a HomeAssistant you end up with nothing or spend hours trying to make it work.
 
-It only applies to the cheapest Synology products which are running on ARM-based 32bit processors.
+In my case I was disappointed the HomeAssistant package is available on package center only for more expensive Synology and started thinking to obtain RaspberryPI but it is another device in my home which consumes energy just 
+for running HomeAssistant while Synology is working as a file server it caused me to try again, and I managed it :)
+
+It only applies to the Synology products which are running on ARM-based 32bit processors (not Synology DSM - Surveillance Station)
 
 You have few options here:
 - Try to install HomeAssistant from sources
@@ -31,13 +34,13 @@ You have few options here:
 * [Static binaries of docker](https://github.com/docker-library/official-images#architectures-other-than-amd64) | [Binaries List](https://download.docker.com/linux/static/stable/)
 * [Knowledge of how to integrate it with our OS](https://docs.docker.com/engine/install/binaries/)
 
-Don't worry I'll explain to you step by step how to make it working on your ARM-32bits-based server
+Don't worry I'll explain to you step by step how to make it working on your ARM-32bits-based server.
 
 ## Let's start
 
 ### Overview, gathering facts
 
-Please SSH-in to your Synology. If you are using OS X or Linux open up the terminal and type
+Please SSH-in to your Synology. If you are using OS X or Linux open up the terminal and type.
 
 ```bash
 ssh admin@YOURIP
@@ -136,7 +139,7 @@ cd docker_install
 wget URL_TO_DOCKER_BINARY_GOES_HERE
 ```
 
-You need to replace phrase: `URL_TO_DOCKER_BINARY_GOES_HERE` with valid URL to the most recent docker binary for example [docker-20.10.5](https://download.docker.com/linux/static/stable/armhf/docker-20.10.5.tgz) taken from [here](https://download.docker.com/linux/static/stable/armhf/)
+You need to replace phrase: `URL_TO_DOCKER_BINARY_GOES_HERE` with valid URL to the most recent docker binary for example [docker-19.03.9](https://download.docker.com/linux/static/stable/armhf/docker-19.03.9.tgz) taken from [here](https://download.docker.com/linux/static/stable/armhf/)
 
 Ok, let's extract the repository
 
@@ -154,9 +157,11 @@ cd docker
 
 the output example:
 ```bash
-Docker version 20.10.5, build 55c4c88
+Docker version 19.03.8, build afacb8b
 ```
 The output should be the downloaded docker version info of the docker binary if we receive an error message instead it means we downloaded an incompatible package.
+
+*IMPORTANT:* I've got `segmentation fault error for next releases higher than 19.03.8` so if you are getting this error to `19.03.8` should work for you.
 
 ### Docker installation
 
@@ -261,4 +266,4 @@ For more examples and ideas, visit:
  https://docs.docker.com/get-started/
 ```
 
-CONGRATULATIONS YOU HAVE SUCCESSFULLY INSTALLED DOCKER ON your ARM-based NAS!
+CONGRATULATIONS YOU HAVE SUCCESSFULLY INSTALLED DOCKER ON your ARM-32b-based NAS!
