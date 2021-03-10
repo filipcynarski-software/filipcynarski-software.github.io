@@ -1,6 +1,6 @@
 ---
 layout: post
-title: HomeAssistant configuration on Synology
+title: Securing HomeAssistant with CloudFlare
 date: 2021-03-10 21:00:20 +0100
 description: Securing home assistant with CloudFlare
 tags: [HomeAssistant, Synology, CloudFlare, Docker, ARM, ARMv7]
