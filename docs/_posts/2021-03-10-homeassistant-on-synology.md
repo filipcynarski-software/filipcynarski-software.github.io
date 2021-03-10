@@ -6,4 +6,4 @@ description: HomeAssistant configuration on Synology
 tags: [HomeAssistant, Synology, Docker, ARM, ARMv7]
 ---
 
-If you have troubles to install Docker on your Synology like mine you can take a look on my previous [/docker-on-synlogy-32bit](post) how I have successfully configured my DS220j.
+If you have troubles to install Docker on your Synology like mine you can take a look on my previous [post](/docker-on-synlogy-32bit/) how I have successfully configured my DS220j.
