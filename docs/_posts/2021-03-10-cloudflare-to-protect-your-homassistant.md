@@ -8,4 +8,4 @@ tags: [HomeAssistant, Synology, CloudFlare, Docker, ARM, ARMv7]
 
 Nice article which I'm going to explain on my example:
 
-https://hodgkins.io/securing-home-assitant-with-cloudflare
+[securing-home-assitant-with-cloudflare](https://hodgkins.io/securing-home-assitant-with-cloudflare)
