@@ -197,14 +197,16 @@ sudo cp docker/* /usr/bin/
 Start the Docker daemon:
 
 ```bash
-sudo dockerd &
+sudo dockerd
 ```
 
 If no error message is thrown means it runs :)
 
-Additional configuration
+Press CTRL+C to stop the running process.
 
-We need to tell Docker we need to store data in our `/volume1` but before we need to create a place for docker there
+### Additional configuration
+
+We need to tell Docker we need to store data in our `/volume1` but before we need to create a place for Docker there
 
 ```bash
 mkdir /volume1/docker
@@ -222,6 +224,8 @@ so you need to create/edit following file `/etc/docker/daemon.json`
 	"data-root": "/volume1/docker"
 }
 ```
+
+### Configuration testing
 
 To test docker can run call `dockerd` command
 
