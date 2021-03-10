@@ -31,7 +31,7 @@ You have few options here:
 ## What we need
 
 * SSH access enabled on Synology -> (Go to DSM UC > Control Panel > Terminal & SNMP > Terminal, and tick Enable SSH service)
-* [Static binaries of docker](https://github.com/docker-library/official-images#architectures-other-than-amd64) | [Binaries List](https://download.docker.com/linux/static/stable/)
+* [Static binaries of docker](https://github.com/docker-library/official-images#architectures-other-than-amd64) \| [Binaries List](https://download.docker.com/linux/static/stable/)
 * [Knowledge of how to integrate it with our OS](https://docs.docker.com/engine/install/binaries/)
 
 Don't worry I'll explain to you step by step how to make it working on your ARM-32bits-based server.
