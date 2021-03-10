@@ -8,6 +8,8 @@ fig-caption: # Add figcaption (optional)
 tags: [Synology, 32bit, Docker, ARM, ARMv7, armhf]
 ---
 
+This article guides you how to configure Docker on Synology J series like DS220j which is not officially supported by the Synology.
+
 # The problem
 
 I love Docker, it makes my work simpler and helps me to keep the environment of my OS clean. 
