@@ -1,14 +1,18 @@
 ---
 layout: post
-title: Docker on ARMv7 based Synology DS220
+title: Docker on ARM-based Synology DS-line devices
 date: 2021-02-19 18:00:20 +0100
-description: How to run Docker on ARMv7 based Synology 32b NAS 
+description: How to run Docker on ARM-based Synology DS-line NAS 
 img: i-rest.jpg # Add image post (optional)
 fig-caption: # Add figcaption (optional)
-tags: [Synology, 32bit, Docker, ARM, ARMv7, armhf]
+tags: [Synology, 32bit, 64bit, Docker, ARM, ARMv7, armhf, DS220J, DS218]
 ---
 
-This article guides you how to configure Docker on Synology J series like DS220j which is not officially supported by the Synology.
+This article guides you how to configure Docker on Synology's cheapest line of devices like DS220J or DS218 w lack of official support for Docker from the Synology side.
+
+Initially I've described how to configure the Docker on DS220J but basing on readers' reports I can say it also works for 64bit CPUs on DS218. 
+
+**Important**: Keep in mind if you are using your synology as NAS and wants to setup docker for HomeAssistant it may consume too much Synology's resources and may lead to performance issues related to hardware - I have finally separated my Synology and HomeAssistant by installing HA on Raspberry PI - but you may have different use case than mine and this guide may be helpful for you :) 
 
 # The problem
 
